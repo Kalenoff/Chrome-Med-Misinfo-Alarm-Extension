@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Medical Misinfo Alarm",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-default_16.png",
+      "48": "icon-default_48.png",
+      "128": "icon-default_128.png"
+    }
+  },
+  "icons": {
+    "16": "icon-default_16.png",
+    "48": "icon-default_48.png",
+    "128": "icon-default_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
